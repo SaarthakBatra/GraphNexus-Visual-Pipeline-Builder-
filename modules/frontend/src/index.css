@@ -1,0 +1,432 @@
+/*
+ * ============================================================================
+ * COPYRIGHT NOTICE & INTELLECTUAL PROPERTY WARNING
+ * ============================================================================
+ * This source code, architectural design, and associated assets are the 
+ * exclusive property of Saarthak Batra. All rights reserved.
+ * 
+ * Unauthorized copying, distribution, modification, reverse engineering, 
+ * or deployment of this codebase in commercial, staging, or production 
+ * environments, in whole or in part, without the express written permission 
+ * of Saarthak Batra is strictly prohibited.
+ * 
+ * This code is provided solely for evaluation and study purposes. Violation 
+ * of these terms will trigger immediate termination of use and will be 
+ * met with strict legal measures.
+ * 
+ * Cryptographic verification signature: [U2FhcnRoYWsgQmF0cmE=]
+ * ============================================================================
+ */
+
+/* Obfuscated verification SHA-256 key matching 'Saarthak Batra' */
+.flow-canvas-grid-f4cc3ca5 {
+  content: "f4cc3ca5875225c56d70c4974d0a927ea4d8c07e0c0612c8ff4cb70de23971fe";
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f172a; /* Slate Dark */
+  color: #e2e8f0; /* Slate 200 */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global Form Elements Styling */
+input, select, textarea {
+  background-color: #1e293b; /* Slate 800 */
+  color: #e2e8f0;
+  border: 1px solid #334155; /* Slate 700 */
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #6366f1; /* Indigo 500 */
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #cbd5e1; /* Slate 300 */
+}
+
+/* BaseNode Glassmorphic Global Class */
+.base-node {
+  width: 250px;
+  background: rgba(39, 39, 42, 0.7); /* Zinc 800 with opacity */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #475569; /* Slate 600 */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s;
+}
+
+.base-node:hover {
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  border-color: #818cf8; /* Indigo 400 */
+}
+
+.base-node.selected,
+.node-connecting .base-node {
+  border-color: #6366f1; /* Glowing indigo border */
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5), 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.base-node-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+  font-size: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+
+.base-node-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.base-node-content {
+  padding: 14px;
+}
+
+.base-node-close {
+  background: transparent;
+  border: none;
+  color: #94a3b8; /* Slate 400 */
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.base-node-close:hover {
+  color: #f87171; /* Red 400 */
+  background-color: rgba(248, 113, 113, 0.1);
+}
+
+.base-node-close svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* App Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(30, 41, 59, 0.8); /* Slate 800 */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Action Buttons */
+.action-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  border: none;
+  color: white;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+}
+
+.submit-button {
+  background-color: rgba(99, 102, 241, 0.8); /* Indigo 500 */
+  border: 1px solid #6366f1;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+.submit-button:hover {
+  background-color: rgba(99, 102, 241, 1);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
+}
+
+.reset-button {
+  background-color: rgba(248, 113, 113, 0.2); /* Red 400 */
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  color: #fca5a5;
+}
+
+.reset-button:hover {
+  background-color: rgba(248, 113, 113, 0.4);
+}
+
+.secondary-button {
+  background-color: rgba(148, 163, 184, 0.2); /* Slate 400 */
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  color: #e2e8f0;
+}
+
+.secondary-button:hover {
+  background-color: rgba(99, 102, 241, 0.3); /* Indigo */
+  border-color: rgba(99, 102, 241, 0.6);
+  color: #fff;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+}
+
+.secondary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: rgba(148, 163, 184, 0.1);
+  border-color: rgba(148, 163, 184, 0.2);
+  box-shadow: none;
+  color: #94a3b8;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circular */
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* React Flow Custom Overrides */
+.react-flow__handle {
+  width: 12px;
+  height: 12px;
+  background-color: #6366f1; /* Indigo */
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 5px rgba(99, 102, 241, 0.8);
+  transition: box-shadow 0.1s, background-color 0.1s;
+}
+
+.react-flow__handle:hover {
+  box-shadow: 0 0 12px rgba(99, 102, 241, 1);
+  background-color: #818cf8;
+}
+
+.react-flow__controls {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background-color: #1e293b !important; /* Slate 800 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #cbd5e1 !important; /* Slate 300 */
+  fill: #cbd5e1 !important;
+  transition: background-color 0.2s !important;
+}
+
+.react-flow__controls-button:hover {
+  background-color: #334155 !important; /* Slate 700 */
+}
+
+.react-flow__controls-button path {
+  fill: currentColor;
+}
+
+/* Toolbar Node Selectors */
+.draggable-node {
+  cursor: grab;
+  min-width: 80px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #1C2536;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #475569;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.draggable-node:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  border-color: #6366f1;
+}
+
+/* Handle Tooltips */
+.react-flow__handle {
+  position: relative;
+}
+
+.handle-tooltip {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  border: 1px solid #475569;
+}
+
+.react-flow__handle:hover .handle-tooltip {
+  opacity: 1;
+}
+
+/* Connection Mode UI */
+.connection-mode-overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(30, 41, 59, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 20;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.connection-overlay-scroll-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 8px; /* Push scrollbar away from right edge */
+}
+
+/* Custom Scrollbars for Textareas and Overlays */
+.base-node-content textarea::-webkit-scrollbar,
+.connection-overlay-scroll-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.base-node-content textarea::-webkit-scrollbar-track,
+.connection-overlay-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.base-node-content textarea::-webkit-scrollbar-thumb,
+.connection-overlay-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
+}
+
+.connection-handle-btn {
+  background: #334155;
+  color: #fff;
+  border: 1px solid #475569;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.connection-handle-btn:hover {
+  background: rgba(99,102,241,0.2);
+  border-color: #6366f1;
+}
+
+
+
+/* Enlarge button hover */
+.text-enlarge-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  border-radius: 4px;
+  padding: 4px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-enlarge-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #1e293b;
+  border: 1px solid #475569;
+  border-radius: 12px;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #334155;
+}
+
+.modal-body {
+  flex: 1;
+  padding: 24px;
+}

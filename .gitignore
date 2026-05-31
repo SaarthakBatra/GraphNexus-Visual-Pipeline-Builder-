@@ -1,0 +1,21 @@
+# Dependencies & Build Artifacts
+node_modules/
+dist/
+build/
+coverage/
+__pycache__/
+*.pyc
+*.pyo
+venv/
+
+# Environment Secrets
+.env
+
+# System Files
+.DS_Store
+
+# 🚫 EXCLUDED: Private AI Context & Metadata 🚫
+.agent/
+.antigravity/
+MAINTENANCE.md
+VERIFICATION.md
