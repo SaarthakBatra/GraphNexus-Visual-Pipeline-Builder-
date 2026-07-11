@@ -1,6 +1,6 @@
 # Backend Module
 
-FastAPI Python server for the VectorShift pipeline application.
+FastAPI Python server for the GraphNexus pipeline application.
 
 ## Architectural Decisions
 1. **Cycle Detection (Kahn's Algorithm):** We transitioned from 3-State DFS to Kahn's Algorithm. Kahn's queue-based topological sort fundamentally avoids Python's recursion depth vulnerability (`RecursionError` on deep linear pipelines) and implicitly validates task schedulability. In Phase 6, we extended this to evaluate the residual `in_degree` map, allowing us to explicitly isolate and return `cycle_nodes` to the frontend for precise error mapping.
@@ -26,4 +26,4 @@ Controlled by a `.env` `DEBUG=true` flag with a customized formatter designed to
 Run backend tests via the orchestrator script from the root directory:
 `../../tests/run_all.sh`
 
-For explicit execution details (cURL payloads and commands), refer to [testing_guide.md](file:///home/saarthak.batra/Documents/Antigravity/VectorShift%20Round%201%20-%2028May26/modules/backend/testing_guide.md).
+For explicit execution details (cURL payloads and commands), refer to [testing_guide.md](./testing_guide.md).

@@ -1,19 +1,21 @@
-PROPRIETARY AND CONFIDENTIAL STUDY/SUBMISSION LICENSE
+MIT License
 
-Copyright (c) 2026 Saarthak Batra. All rights reserved.
+Copyright (c) 2026 Saarthak Batra
 
-TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. GRANT OF LICENSE:
-This software codebase, including its algorithms, designs, schemas, and configurations, is provided solely for evaluation, grading, and study purposes in connection with the technical assessment submission by Saarthak Batra.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-2. RESTRICTIONS ON USE:
-You are strictly prohibited from using, copying, modifying, merging, publishing, distributing, sublicensing, or selling this software or any part thereof in any production, commercial, staging, or operational environment.
-
-3. INTELLECTUAL PROPERTY:
-All title, ownership rights, and intellectual property rights in and to the software remain the sole property of Saarthak Batra.
-
-4. REMEDIES AND JURISDICTION:
-Unauthorized use of this software will trigger immediate termination of this license. The author reserves the right to take strict legal action, including seeking injunctive relief and damages under copyright laws.
-
-THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

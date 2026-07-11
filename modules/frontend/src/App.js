@@ -43,7 +43,7 @@ const TopBar = () => {
       setMenuOpen(false);
       let nameToSave = projectName;
       if (!nameToSave || nameToSave === 'Untitled Project') {
-          nameToSave = prompt("Please enter a project name before saving:", "My VectorShift Project");
+          nameToSave = prompt("Please enter a project name before saving:", "My GraphNexus Project");
           if (!nameToSave) return;
           setProjectName(nameToSave);
       }
@@ -189,7 +189,7 @@ function App() {
 
   // Load from localStorage on mount
   useEffect(() => {
-    const saved = localStorage.getItem('vectorshift_project');
+    const saved = localStorage.getItem('graphnexus_project');
     if (saved) {
       try {
         const payload = JSON.parse(saved);
@@ -207,7 +207,7 @@ function App() {
         projectName: state.projectName,
         dynamicNodeTypes: state.dynamicNodeTypes
       };
-      localStorage.setItem('vectorshift_project', JSON.stringify(payload));
+      localStorage.setItem('graphnexus_project', JSON.stringify(payload));
     });
 
     return () => unsubscribe();

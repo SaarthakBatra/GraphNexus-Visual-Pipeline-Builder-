@@ -42,7 +42,7 @@ jest.mock('reactflow', () => {
   };
 });
 
-describe('VectorShift Frontend Workflow Tests', () => {
+describe('GraphNexus Frontend Workflow Tests', () => {
   beforeEach(() => {
     // Reset store state
     act(() => {

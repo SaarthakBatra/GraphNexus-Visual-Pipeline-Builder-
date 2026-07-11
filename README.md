@@ -1,4 +1,4 @@
-# VectorShift Workflow Pipeline Platform
+# GraphNexus - Visual Pipeline Builder
 
 A modern, high-performance, and visual node-editing workflow canvas built using React, React Flow, and Zustand on the frontend, integrated with a FastAPI Python server on the backend. This platform supports dynamic handle generation, automated cycle detection, and a dual-transport validation pipeline.
 

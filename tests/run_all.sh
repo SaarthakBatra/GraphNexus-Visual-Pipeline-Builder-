@@ -2,7 +2,7 @@
 set -e
 
 echo "=========================================="
-echo " Starting VectorShift Test Orchestrator "
+echo " Starting GraphNexus Test Orchestrator "
 echo "=========================================="
 
 # 1. Run Backend Tests

@@ -1,6 +1,6 @@
 # Frontend Module
 
-React Flow workflow editor for VectorShift.
+React Flow workflow editor for GraphNexus.
 
 ## Architectural Decisions & UX Refinements
 1. **Core Abstraction (BaseNode):** A core wrapper component for all pipeline nodes, enforcing a unified structure, glassmorphic styling, and standardized dynamic handle generation.
